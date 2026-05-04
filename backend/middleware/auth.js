@@ -10,6 +10,7 @@ const config = {
   secret: process.env.SECRET,
   baseURL: process.env.BASE_URL,
   clientID: process.env.CLIENT_ID,
-  issuerBaseURL: process.env.ISSUER,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
 };
+
 export const authMiddleware = auth(config);

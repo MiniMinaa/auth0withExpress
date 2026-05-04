@@ -3,6 +3,9 @@ import express from "express";
 import { authMiddleware } from "./middleware/auth.js";
 import pkg from "express-openid-connect";
 import cors from "cors";
+import "dotenv/config";
+
+console.log("DEBUG SECRET:", process.env.SECRET);
 
 const { requiresAuth } = pkg;
 const app = express();
