@@ -31,6 +31,16 @@ app.get("/profile", requiresAuth(), (req, res) => {
   }
 });
 
+// Public test route: return a hardcoded list of books
+app.get("/books", (req, res) => {
+  const books = [
+    { id: 1, title: "The Hobbit", author: "J.R.R. Tolkien" },
+    { id: 2, title: "1984", author: "George Orwell" },
+    { id: 3, title: "Clean Code", author: "Robert C. Martin" },
+  ];
+  res.json(books);
+});
+
 // Protected route
 // app.get("/secure-data", verifyToken, (req, res) => {
 //   res.json({
